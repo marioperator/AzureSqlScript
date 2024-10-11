@@ -1,10 +1,10 @@
 # Azure SQL - Clean Orphaned Elastic Job Objects
 
-This SQL script helps resolve issues related to orphaned objects from Elastic Jobs in Azure SQL, specifically when working with **Microsoft Dynamics NAV 2018**. When an active elastic job exists, exporting the database to a BACPAC file can fail due to the presence of orphaned objects, such as procedures, foreign keys, views, tables, and user-defined types. 
+This SQL script helps resolve issues related to orphaned objects from Elastic Jobs in Azure SQL, specifically when working with **Microsoft Dynamics NAV 2018**. When an active elastic job exists, exporting the database to a BACPAC file can fail due to the presence of orphaned objects, such as procedures, foreign keys, views, tables, and user-defined types.
 
 ## Problem
 
-An active **Elastic Job** can leave behind orphaned objects in the database. This prevents the successful export of the database into a BACPAC file, which is critical for backups or migrations. The script cleans up these objects, allowing the export to complete successfully.
+When attempting to export the database to a BACPAC file, you may encounter errors caused by orphaned objects left behind by active Elastic Jobs. These orphaned objects can lead to export failures, making it impossible to create a backup or migrate the database effectively.
 
 ## Solution
 
